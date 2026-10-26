@@ -1,0 +1,30 @@
+<!-- Capçalera amb el logotip i el menú de navegació -->
+<header class="sticky top-0 z-10 bg-red-700 text-white shadow-md">
+  <div class="mx-auto flex max-w-5xl items-center justify-between p-4">
+
+    <a href="#inici" class="flex items-center gap-2 text-2xl font-bold" (click)="tancarMenu()">
+      <span>PokéFans</span>
+    </a>
+
+    <!-- Botó per obrir el menú per a mòbils -->
+    <button type="button" class="rounded border border-yellow-300 px-3 py-1 md:hidden" (click)="canviarMenu()" aria-label="Obrir o tancar el menú">Menú</button>
+
+    <!-- Menú de navegació -->
+    <nav class="absolute left-0 top-full w-full bg-red-800 md:static md:block md:w-auto md:bg-transparent" [class.hidden]="!menuObert()" aria-label="Navegació principal">
+      <ul class="flex flex-col md:flex-row md:gap-6">
+        <li>
+          <a href="#inici" class="block p-3 hover:text-yellow-300" (click)="tancarMenu()">Inici</a>
+        </li>
+        <li>
+          <a href="#tipus" class="block p-3 hover:text-yellow-300" (click)="tancarMenu()">Tipus</a>
+        </li>
+        <li>
+          <a href="#nosaltres" class="block p-3 hover:text-yellow-300" (click)="tancarMenu()">Sobre la web</a>
+        </li>
+        <li>
+          <a href="#contacte" class="block p-3 hover:text-yellow-300" (click)="tancarMenu()">Contacte</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
