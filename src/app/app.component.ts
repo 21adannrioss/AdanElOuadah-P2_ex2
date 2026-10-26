@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Header } from './header/header.component';
-import { Main } from './main/main.component';
-import { Footer } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { PrincipalComponent } from './principal/principal.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
-  imports: [Header, Main, Footer],
+  imports: [HeaderComponent, PrincipalComponent, FooterComponent],
   selector: 'app-root',
   styleUrl: './app.component.css',
   templateUrl: './app.component.html',

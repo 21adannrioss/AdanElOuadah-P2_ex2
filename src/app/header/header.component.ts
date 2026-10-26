@@ -6,7 +6,7 @@ import { Component, signal } from '@angular/core';
   styleUrl: './header.component.css',
   templateUrl: './header.component.html',
 })
-export class Header {
+export class HeaderComponent {
   // Per saber si el menú està obert al mòbil
   protected readonly menuObert = signal(false);
 
