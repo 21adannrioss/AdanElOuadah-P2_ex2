@@ -1,40 +1,20 @@
 <!-- Contingut principal de la pàgina d'inici -->
 <main class="bg-linear-to-b from-stone-900 via-stone-800 to-amber-900">
 
-  <!-- Hero -->
-  <section id="inici">
-    <div class="mx-auto flex max-w-5xl flex-col-reverse items-center gap-10 p-8 md:flex-row md:py-16">
-      <div class="text-center md:w-1/2 md:text-left">
-        <h1 class="text-4xl font-bold text-amber-300 md:text-5xl">Descobreix el món Pokémon</h1>
-        <p class="mt-4 text-lg text-stone-200">
-          Una web feta per fans on trobaràs informació sobre els tipus, els
-          inicials de cada regió i curiositats per a entrenadors novells.
-        </p>
-        <a href="#tipus" class="mt-6 inline-block rounded-lg bg-amber-500 px-6 py-3 font-semibold text-stone-900 hover:bg-amber-400">Explora els tipus</a>
-      </div>
-      <div class="md:w-1/2">
-        <img src="assets/rubi_omega.png" alt="Mural de Groudon, Kyogre i Rayquaza"
-             class="w-full rounded-2xl border-4 border-amber-500 shadow-2xl shadow-black/50"/>
-      </div>
-    </div>
-  </section>
+  <app-hero/>
 
   <!-- Tipus -->
-  <section id="tipus" class="mx-auto max-w-5xl p-8 py-12">
+  <section id="tipus" class="scroll-mt-28 mx-auto max-w-5xl p-8 py-12">
     <h2 class="mb-8 text-center text-3xl font-bold text-amber-300">Els tipus principals</h2>
     <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
       @for(tipus of tipusPokemon; track tipus.nom) {
-        <article class="rounded-lg border-t-8 bg-stone-100 p-6 text-center shadow hover:shadow-lg" [class]="tipus.color">
-          <h3 class="mt-3 text-xl font-semibold text-gray-800">{{tipus.nom}}</h3>
-          <p class="mt-2 text-gray-600">{{tipus.descripcio}}</p>
-          <p class="mt-3 text-sm font-bold text-gray-700">Inicial: {{tipus.inicial}}</p>
-        </article>
+        <app-tipus-targeta [tipus]="tipus"/>
       }
     </div>
   </section>
 
   <!-- Sobre Nosaltres -->
-  <section id="nosaltres">
+  <section id="nosaltres" class="scroll-mt-28">
     <div class="mx-auto max-w-3xl p-8 py-12 text-center">
       <h2 class="text-3xl font-bold text-amber-300">Sobre Nosaltres</h2>
       <p class="mt-4 text-stone-200">És una web de fans i no és oficial. Serveix per tenir a mà els tipus de Pokémon i recordar què és fort i què és feble contra què quan jugo.</p>
